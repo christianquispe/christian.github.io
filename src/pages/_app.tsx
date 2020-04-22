@@ -3,7 +3,6 @@ import { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { Store } from "redux";
 import assembleStore from "../redux/store";
-import "./app.scss";
 
 interface MyAppProps extends AppProps {
   store: Store;

@@ -1,0 +1,47 @@
+@import "../../../vars/viewport.less";
+@import "../../../vars/utils.less";
+
+.MenuTop {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 50px;
+  background-color: @black-primary;
+  // background-color: transparent;
+  position: fixed;
+  padding: 0 15px;
+  z-index: @z-index-middle;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+.MenuTop__title,
+.MenuTop__subtitle {
+  margin: 0;
+}
+
+.MenuTop__title {
+  color: @white-primary;
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  z-index: @z-index-middle;
+}
+
+.MenuTop__subtitle {
+  color: @white-primary;
+  position: absolute;
+  z-index: @z-index-low;
+  transition: all 0.3s linear;
+  color: transparent;
+}
+
+.MenuTop__subtitle--active {
+  z-index: @z-index-middle;
+  transform: translateX(130%);
+  background-color: @white-primary;
+  color: @black-primary;
+  border-radius: 90px;
+  padding: 0 5px;
+}
